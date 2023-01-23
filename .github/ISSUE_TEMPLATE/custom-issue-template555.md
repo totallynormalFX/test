@@ -1,9 +1,9 @@
 ---
-name: Custom issue template
+name: Custom issue template555
 about: Describe this issue template's purpose here.
 title: ''
 labels: ''
-assignees: ''
+assignees: totallynormalFX
 
 ---
 
