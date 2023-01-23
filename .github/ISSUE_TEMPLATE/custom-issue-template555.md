@@ -3,17 +3,18 @@ name: Custom issue template555
 about: Describe this issue template's purpose here.
 title: ''
 labels: ''
-assignees: totallynormalFX
+assignees: ''
 
 ---
 
----
-body:
 - type: dropdown
+  id: download
   attributes:
-    label: Do you like pie?
+    label: How did you download the software?
     options:
-      - Yes
-      - No
-      - Maybe
----
+      - Homebrew
+      - MacPorts
+      - apt-get
+      - Built from source
+  validations:
+    required: true
