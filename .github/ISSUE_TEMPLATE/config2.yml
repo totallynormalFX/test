@@ -53,8 +53,8 @@ body:
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Dev Test
+      description: By submitting this issue, you agree to the following statement
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: I do solemnly swear that I tested this issue in Dev.
           required: true
