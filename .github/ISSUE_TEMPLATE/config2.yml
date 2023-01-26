@@ -7,14 +7,20 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
+  - type: textarea
     id: file
     attributes:
       label: Upload File
-      description: Upload a zip file of your embergen preset here
-      placeholder: preset.ember
+      description: Upload a zip file of your embergen preset and relevant files here
+      placeholder: files.zip
     validations:
       required: false
+  - type: textarea
+    id: video
+    attributes:
+      label: Video Upload
+      description: Please upload a video demonstrating the described behavior as well as the steps to reproduce
+      render: shell      
   - type: textarea
     id: what-happened
     attributes:
@@ -25,31 +31,19 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: category
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Category
+      description: What category best fits the bug you're reporting
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Simulation
+        - Import
+        - Export
+        - UI/UX
+        - Render
+        - Particles
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
   - type: checkboxes
     id: terms
     attributes:
