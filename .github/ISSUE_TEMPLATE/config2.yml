@@ -26,17 +26,16 @@ body:
       required: true
       
   - type: dropdown
-    id: category
+    id: severity
     attributes:
-      label: Category
-      description: What category best fits the bug you're reporting
+      label: Severity Selection
+      description: How severe is this issue?
       options:
-        - Simulation
-        - Import
-        - Export
-        - UI/UX
-        - Render
-        - Particles
+        - General Housekeeping
+        - idk it just looks bad
+        - Optimized Functionality
+        - Simulation Breaking
+        - App Crash
     validations:
       required: true
       
