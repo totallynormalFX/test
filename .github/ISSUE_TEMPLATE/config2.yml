@@ -1,7 +1,7 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug"]
+labels: Bug
 body:
   - type: markdown
     attributes:
@@ -10,26 +10,21 @@ body:
   - type: textarea
     id: file
     attributes:
-      label: Upload File
-      description: Upload a zip file of your embergen preset and relevant files here
-      placeholder: files.zip
+      label: Description
+      description: Describe the behavior or oddity as well as the minimal steps to reproduce the bug
+      placeholder: Step 1. Open EmberGen, Step 2. Turn on Smooth UI....
     validations:
-      required: false
+      required: true
+      
   - type: textarea
     id: video
     attributes:
-      label: Video Upload
-      description: Please upload a video demonstrating the described behavior as well as the steps to reproduce
-      render: shell      
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Video / Preset Upload
+      description: Please upload a zip file that includes a video demonstrating the described behavior described above (with audio if possible), as well as the preset used in the video. We reccomend using Handbrake to compress your video if your file size exceeds the github limit.
+      placeholder: example.zip
     validations:
       required: true
+      
   - type: dropdown
     id: category
     attributes:
@@ -44,6 +39,7 @@ body:
         - Particles
     validations:
       required: true
+      
   - type: checkboxes
     id: terms
     attributes:
