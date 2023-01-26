@@ -12,7 +12,8 @@ body:
     attributes:
       label: Description
       description: Describe the behavior or oddity as well as the minimal steps to reproduce the bug
-      placeholder: Step 1. Open EmberGen, Step 2. Turn on Smooth UI....
+      placeholder: Step 1. Open EmberGen, 
+      Step 2. Turn on Smooth UI....
     validations:
       required: true
       
