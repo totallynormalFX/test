@@ -1,44 +1,67 @@
-name: Bug Report2
-description: File a bug report
-title: "[Bug]: "
+name: Imported Mesh Emergency Room
+description: Imported Mesh File
+title: "[Imported Mesh]: "
 labels: bug
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+        
   - type: textarea
-    id: file
+    id: email
+    attributes:
+      label: Email
+      description: Please provide your email so that we can contact you personally about this file
+      placeholder: your@email.com
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
     attributes:
       label: Description
-      description: Describe the behavior or oddity as well as the minimal steps to reproduce the bug
+      description: Give a detailed description of the expected behavior of your mesh and the behavior observed in EmberGen
       placeholder: Step 1. Open EmberGen. Step 2. Turn on Smooth UI....
     validations:
       required: true
       
   - type: textarea
-    id: video
+    id: file
     attributes:
-      label: Video / Preset Upload
-      description: Please upload a zip file that includes a video demonstrating the described behavior described above (with audio if possible), as well as the preset used in the video. We reccomend using Handbrake to compress your video if your file size exceeds the github limit.
+      label: File Upload
+      description: Please upload a zip file or link to a zip file that includes the animated mesh, embergen preset, and project file (backplates are not necessary).
       placeholder: example.zip
     validations:
       required: true
       
-  - type: dropdown
-    id: severity
+   - type: dropdown
+    id: file type
     attributes:
-      label: Severity Selection
-      description: How severe is this issue?
+      label: File Type
+      description: What kind of file are you using?
       options:
-        - General Housekeeping
-        - idk it just looks bad
-        - Optimized Functionality
-        - Simulation Breaking
-        - App Crash
+        - fbx
+        - abc
+        - obj
     validations:
       required: true
       
+  - type: dropdown
+    id: origin
+    attributes:
+      label: Origin Software
+      description: What software was used to create this file?
+      options:
+        - Blender
+        - Maya
+        - Cinema4D
+        - Houdini
+        - 3DS Max
+        - other / unknown
+    validations:
+      required: true
+           
   - type: checkboxes
     id: terms
     attributes:
