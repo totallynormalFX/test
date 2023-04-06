@@ -3,8 +3,8 @@ description: Imported Mesh File
 title: "[Imported Mesh]: "
 labels: bug
 body:
-- type: markdown
-  attributes:
+  - type: markdown
+    attributes:
     value: "## Welcome!"
       
   - type: textarea
