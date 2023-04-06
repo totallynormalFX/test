@@ -3,7 +3,7 @@ description: Imported Mesh File
 title: "[Imported Mesh]: "
 labels: bug
 body:
-  - type: markdown
+- type: markdown
     attributes:
     value: "## Welcome!"
       
