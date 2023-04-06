@@ -1,0 +1,58 @@
+name: Assign Label to Issue
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  assign-label:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Issue Data
+      uses: actions/github-script@v4
+      with:
+        script: |
+          const { data } = await github.issues.get({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number
+          })
+          console.log(data)
+          return data
+
+    - name: Assign Label
+      if: ${{ github.event.issue }}
+      uses: actions/github-script@v4
+      with:
+        script: |
+          const { data } = await github.issues.get({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number
+          })
+          console.log(data)
+
+          const labelsToAdd = []
+
+          // Replace "dropdown" with the ID of your dropdown input
+          const dropdownValue = data.body.match(/- id: dropdown[\s\S]*value: ([^\s]*)/)[1]
+
+          // Map dropdown values to label names
+          const labelNames = {
+            'option1': 'Label 1',
+            'option2': 'Label 2',
+            'option3': 'Label 3'
+          }
+
+          // Assign label based on dropdown value
+          const labelToAdd = labelNames[dropdownValue]
+
+          if (labelToAdd) {
+            labelsToAdd.push(labelToAdd)
+          }
+
+          await github.issues.addLabels({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            labels: labelsToAdd
+          })
