@@ -4,7 +4,15 @@ title: "[Imported Mesh]: "
 labels: bug
 body:
 
-
+      
+  - type: textarea
+    id: email
+    attributes:
+      label: Email
+      description: Please provide your email so that we can contact you personally about this file
+      placeholder: your@email.com
+    validations:
+      required: true
   
       
   - type: textarea
