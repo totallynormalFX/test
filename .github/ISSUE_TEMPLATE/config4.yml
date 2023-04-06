@@ -37,7 +37,7 @@ body:
       required: true
       
   - type: dropdown
-    id: file type
+    id: file-type
     attributes:
       label: File Type
       description: What kind of file are you using?
