@@ -1,7 +1,7 @@
 name: Imported Mesh Emergency Room
 description: Description
 title: "[Imported Mesh]: "
-labels: bug
+labels: file-type
 body:
   - type: markdown
     attributes:
