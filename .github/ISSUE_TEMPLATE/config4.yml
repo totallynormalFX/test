@@ -7,7 +7,7 @@ body:
     attributes:
       value: Thank you for taking the time to reach out to us about your imported mesh. This form is intended to organize models and educate our users on best practices and troublshooting methods for imported meshes. In order to establish some common ground, we ask that you please download the free and open source software Blender, you can do so by using this [Link](https://www.blender.org/). Once you have installed Blender, please take the time to import your mesh into a scene to confirm that a 3rd party software can appropriately read the mesh and animation data. If the mesh works in Blender, but doesn't work in EmberGen, try exporting that same file from Blender into EmberGen. If it does work, we ask that you do not fill this form out, as we want to limit the amount of time we spend fixing errors caused by irregularites from other 3D engines. Blender is a much more stable frame of reference for us to work from, and will allow us to more quickly address the problem if it remains.
 
-image: This is an image: ![alt text](https://github.com/totallynormalFX/test/blob/main/.github/ISSUE_TEMPLATE/images/alembic-export.png)
+image: This is an image: (https://github.com/totallynormalFX/test/blob/main/.github/ISSUE_TEMPLATE/images/alembic-export.png)
 
   - type: textarea
     id: email
