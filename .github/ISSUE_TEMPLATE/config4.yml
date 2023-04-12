@@ -43,9 +43,9 @@ body:
   - type: input
     id: file
     attributes:
-      label: File Upload
-      description: Please upload a zip file or link to a zip file that includes the animated mesh, embergen preset, and project file (backplates are not necessary).
-      placeholder: example.zip
+      label: File Link
+      description: Please upload a zip file to Google Drive. The zip file must include the animated mesh, embergen preset, and project file (backplates are not necessary).
+      placeholder: https://drive.google.com/drive/folders...
     validations:
       required: true
       
